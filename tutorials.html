@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/tutorials.css">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
+    <title>DecentraCorp</title>
+</head>
+
+<body class="bg--black pt-5">
+    <nav class="navbar w-100 justify-content-center">
+        <a href="index.html" class="navbar-brand" style="width: 12rem;">
+            <img src="assets/img/dc-name-logo0.png" alt="" class="img-fluid">
+        </a>
+    </nav>
+
+    <h1 class="text-center text-white">TUTORIALS</h1>
+    <div class="accordion pt-5" id="tutorialAccordion">
+        <div class="card bg--gray border-white">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link text-light" type="button" data-toggle="collapse"
+                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        DecentraCorp Proof of Authority (DCPoA) Network and Membership (REQUIRED)
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#tutorialAccordion">
+                <div class="card-body bg--red text-light">
+                    <div class="row">
+                        <span class="display-4 font-weight-bold">Instructions are for Ubuntu/Debian</span>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <ul class="list-unstyled w-100">
+                            <li class="font-weight-bold">To complete this tutorial you need:</li>
+                            <li class="pt-2">an open terminal </li>
+                            <li>a web browser with the <a href="https://metamask.io/" target="_blank"
+                                    class="btn btn-warning">Metamask</a>
+                                extension installed
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">install parity: <kbd>bash &lt;(curl https://get.parity.io -L) -r
+                                stable</kbd>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">clone the DecentraCorpPoA repo: <kbd>git clone
+                                https://github.com/DecentraCorp/DecentraCorpPoA.git</kbd>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">move into the DecentraCorp directory: <kbd>cd DecentraCorpPoA</kbd></p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">use Nano to setup a new password: <kbd>sudo nano pass.pwd</kbd></p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">save your password: <kbd>ctrl + x</kbd> then <kbd>y</kbd> then <kbd>enter</kbd>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">run parity with your password to create a new public key hash: <kbd>parity
+                                --config config.toml account new</kbd>
+                            <span class="d-block pt-2 text-warning font-weight-bold">copy this hash for future
+                                use</span>
+                            <span class="d-block pt-2 text-warning">Note: <kbd>ctrl + shift +
+                                    C</kbd> to
+                                copy in
+                                Nano</span>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">open up config.toml: <kbd>sudo nano config.toml</kbd></p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">remove the <kbd>#</kbd> symbol before the <kbd>#unlock</kbd>(line 32) and
+                            <kbd>#engine_signer</kbd>(line 36) variables
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">replace the current hash values of <kbd>unlock</kbd>(line 32) and
+                            <kbd>engine_signer</kbd>(line 36)
+                            with your public key hash:
+                            <span class="d-block"><kbd>unlock = ["PasteYourPublicKeyHashHere"]</kbd>
+                                <kbd>engine_signer = "PasteYourPublicKeyHashHere"</kbd>
+                            </span>
+                            <span class="d-block pt-2 text-warning">Note: <kbd>ctrl + shift +
+                                    V</kbd> to
+                                paste in
+                                Nano</span></p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">save your updated config.toml file: <kbd>ctrl + x</kbd> then <kbd>y</kbd> then
+                            <kbd>enter</kbd></p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">connect to the network: <kbd>parity --config config.toml</kbd>
+                            <span class="d-block pt-2 text-warning">Your node will sync and begin to download the
+                                blockchain</span>
+                            <span class="d-block pt-2 text-warning font-weight-bold">Keep this terminal open
+                                and
+                                running in the background</span>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">Start your web browser and open your Metamask extension. Change the Metamask
+                            network to
+                            localhost:8545.</p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100"> Follow <a href="https://DecentraCorp.now.sh" target="_blank"
+                                class="btn btn-warning">
+                                this link</a> to access DecentraCorps dApp to sign up for a membership</p>
+                        <span class="d-block pt-2 text-warning">current membership terms and benefits are posted on the
+                            dApp site, and are likely to change after we complete our beta testing phase</span>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">to disconnect from the network simply press <kbd>ctrl + C</kbd></p>
+                        <span class="d-block pt-2 text-warning font-weight-bold">close your browser and metamask before
+                            disconnecting from the network</span>
+                    </div>
+                    <div class="row pt-3">
+                        <p class="w-100">to connect in the future:
+                            <span class="d-block text-center"> first, move to the DecentraCorpPoA directiory via
+                                terminal.</span>
+                            <span class="d-block text-center"> second, connect to parity <kbd>parity --config
+                                    config.toml</kbd> </span>
+                            <span class="d-block text-center"> third, open your browser and metamask extension to access
+                                the dApps</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card bg--gray border-white">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed text-light" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Chaos Miner (OPTIONAL - Raspberry Pi Miner)
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#tutorialAccordion">
+                <div class="card-body bg--red text-light">
+                    <div class="row">
+                        <span class="display-4 font-weight-bold">Instructions are for Raspian.</span> <span
+                            class="d-block text-warning">Other Pi friendly distros should work, but have yet to be
+                            officially tested</span>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <ul class="list-unstyled w-100">
+                            <li class="font-weight-bold">To complete this tutorial you need:</li>
+                            <li class="pt-2">Raspberry Pi(tested on 2b and 3b+)</li>
+                            <li>three GPIO connectors, wires, and a way to connect them to the antenna</li>
+                            <li>something metal that can be used as an
+                                antenna</li>
+                        </ul>
+                    </div>
+                    <div class="row py-3 border-bottom">
+                        <p class="w-100">
+                            Assemble and attach your antenna to the pi using GPIO pins 4, 17, and 27.
+                        </p>
+                        <div class="row justify-content-around">
+                            <img src="assets/img/pi_antenna00.JPG" alt="pi and antenna assembly"
+                                class="img-fluid img-thumbnail col-12 col-sm-10 col-md-6">
+                            <img src="assets/img/pi_antenna01.JPG" alt="finished pi antenna"
+                                class="img-fluid img-thumbnail col-12 col-sm-10 col-md-6">
+                        </div>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            now power on the Pi and open the
+                            terminal
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            install web3: <kbd>sudo pip3 install web3</kbd>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            install RPi.GPIO: <kbd>sudo pip3 install RPi.GPIO</kbd>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            Clone the Chaos Miner repo into the home directory: <kbd>git clone
+                                https://github.com/DecentraCorp/ChaosMiner.git</kbd>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            move into the Chaos Miner directory: <kbd>cd ChaosMiner</kbd>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            setup a new password: <kbd>sudo nano chaos.pwd</kbd>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            save your password: <kbd>ctrl + x</kbd>then <kbd>y</kbd> then <kbd>enter</kbd>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            Run parity with your password to create a new public key hash: <kbd>./parity --config
+                                chaos.toml
+                                account new</kbd>
+                            <span class="d-block pt-2 text-warning font-weight-bold">copy this hash for future
+                                reference</span>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            Open up chaos.toml: <kbd>sudo nano chaos.toml</kbd>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            Remove the <kbd>#</kbd> symbol before the <kbd>#unlock</kbd>(line 32) and
+                            <kbd>#engine_signer</kbd>(line 36) variables
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            Replace the current hash values of <kbd>unlock</kbd>(line 32) and
+                            <kbd>engine_signer</kbd>(line 36)
+                            with your public key hash:
+                            <span class="d-block text-break"><kbd>unlock = ["PasteYourPublicKeyHashHere"]</kbd>
+                                <kbd>engine_signer = "PasteYourPublicKeyHashHere"</kbd>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            Save the updated chaos.toml file in Nano: <kbd>ctrl + x</kbd> then <kbd>y</kbd> then
+                            <kbd>enter</kbd>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            Connect to the network: <kbd>./parity --config chaos.toml</kbd>
+                            <span class="d-block pt-2 text-warning">Your node will sync and download the
+                                blockchain</span>
+                            <span class="d-block pt-2 text-warning font-weight-bold">keep this
+                                terminal open
+                                and
+                                running in the background</span>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            Open a new terminal window or tab and open the ChaosMiner directory: <kbd>cd
+                                ChaosMiner</kbd>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            Activate your Chaos Miner: <kbd>./Activate.py</kbd>
+                            <span class="d-block pt-2 text-warning">this will prompt you to enter the SAME username and
+                                password that you use for your DecentraCorp dApp membership</span>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            Execute MineChaos.py: <kbd>./MineChaos.py</kbd>
+                            <span class="d-block pt-2 text-warning">A series of about 19 random numbers should
+                                begin
+                                to appear
+                                line by line</span>
+                            <span class="d-block pt-2 text-warning">keep this terminal open and running in the
+                                background</span>
+                        </p>
+                    </div>
+                    <!-- <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            open a new terminal and move into the home directory: <kbd>cd</kbd>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            Open crontab to add auto restart options for the Chaos Miner: <kbd>sudo crontab -e -u
+                                root</kbd>
+                            <span class="d-block pt-2 text-warning"> If prompted to choose one of three
+                                options,
+                                choose #2 Nano</span>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            Add the following lines at the end of the crontab file:
+                            <kbd class="d-block mb-1">@reboot sh /home/pi/ChaosMiner/launcher.sh >/home/pi/logs/cronlog
+                                2>&1</kbd>
+                            <kbd class="d-block mb-1">@reboot sleep 200; sh /home/pi/ChaosMiner/miner.sh
+                                >/home/pi/logs/cronlog2
+                                2>&1</kbd>
+                            <kbd class="d-block">@reboot sleep 3600; sh /home/pi/ChaosMiner/rebooter.sh
+                                >/home/pi/logs/cronlog3
+                                2>&1</kbd>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            Save your updated crontab file: <kbd>ctrl + x</kbd> then <kbd>y</kbd> then <kbd>enter</kbd>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            Your Chaos Miner is now active and setup to run headless.
+                        </p>
+                    </div> -->
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            to disconnect:
+                            <span class="d-block text-center"> first, close the terminal running MineChaos.py <kbd>ctrl
+                                    + z</kbd></span>
+                            <span class="d-block text-center"> second, close the terminal connected to the network
+                                <kbd>ctrl + c</kbd> </span>
+                        </p>
+                    </div>
+                    <div class="row pt-3">
+                        <p class="w-100">
+                            to connect in the future:
+                            <span class="d-block text-center"> first, move to the ChaosMiner directiory via
+                                terminal.</span>
+                            <span class="d-block text-center"> second, connect to parity <kbd>parity --config
+                                    chaos.toml</kbd> </span>
+                            <span class="d-block text-center"> third, open a new terminal and run the MineChaos.py
+                                script (also in the ChaosMiner directory) <kbd>./MineChaos.py</kbd> </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card bg--gray border-white">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed text-light" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                        Node Miner (OPTIONAL - PC Miner)
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#tutorialAccordion">
+                <div class="card-body bg--red text-light">
+                    <div class="row">
+                        <span class="display-4 font-weight-bold">This tutorial requires you to have an existing node and membership</span> <span
+                            class="d-block text-warning">Please see the DCPoA and Membership tutorial!</span>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <ul class="list-unstyled w-100">
+                            <li class="font-weight-bold">To complete this tutorial you need:</li>
+                            <li class="pt-2">A Computer with parity node client installed</li>
+                            <li>A parity node running and connected to the DecentraCorp Proof of Authority Network</li>
+                            <li>A DecentraCorp Membership and enough NotioCoin to stake a NodeMiner(50NTC)</li>
+                            <li>A browser with metamask connected to the local parity node</li>
+                            <li>The username you entered when you created your Account</li>
+                        </ul>
+                    </div>
+
+                  
+                    <div class="row pt-3 border-bottom">
+                      <p class="w-100">
+                        This step assumes you have just done the above and picks up with the assumption that your node is running
+                      </p>
+                        <p class="w-100">
+                            open a new terminal and navigate to your cloned DecentraCorpPoA repo with  <kbd>cd path/to/DecentraCorpPoA</kbd>
+                        </p>
+
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            Activate the replication: <kbd>./Activate.py</kbd>
+                        </p>
+                        <p class="w-100">
+                          You will need the user name you chose during your Membership Creation.
+                        </p>
+                        <p class="w-100">
+                          The staked NotioCoin will be removed automatically from your account.
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            Activate the Embeded Program Mining Software: <kbd>./Activate.py</kbd>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                          Thats it! You are now Mining NotioCoin from UseBlocks on the CryptoPatent Blockchain!
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">
+                            To set both the node and the EPMS into the background run the following commands in each terminal:
+                            <kbd>Ctrl+z</kbd>
+                            <kbd>bg</kbd>
+                            <kbd>disown</kbd>
+                        </p>
+                        <p class="w-100">
+                            After this you can safely close both terminals and they will continue running in the background.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!-- icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
+        integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
