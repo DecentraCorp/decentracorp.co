@@ -29,7 +29,7 @@
                 <h2 class="mb-0">
                     <button class="btn btn-link text-light" type="button" data-toggle="collapse"
                         data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        DecentraCorp Proof of Authority (DCPoA) Network and Membership (REQUIRED)
+                        Become A DecentraCorp Membership (REQUIRED) and earn 1000 NTC!
                     </button>
                 </h2>
             </div>
@@ -37,109 +37,62 @@
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#tutorialAccordion">
                 <div class="card-body bg--red text-light">
                     <div class="row">
-                        <span class="display-4 font-weight-bold">Instructions are for Ubuntu/Debian</span>
+                        <span class="display-4 font-weight-bold">Instructions are for Desktop (Any OS)</span>
                     </div>
                     <div class="row pt-3 border-bottom">
                         <ul class="list-unstyled w-100">
                             <li class="font-weight-bold">To complete this tutorial you need:</li>
-                            <li class="pt-2">an open terminal </li>
-                            <li>a web browser with the <a href="https://metamask.io/" target="_blank"
-                                    class="btn btn-warning">Metamask</a>
-                                extension installed
+                            <li class="pt-2">A Desktop Computer</li>
+                            <li class="pt-2">Either Chrome or Firefox web browser(browsers based on Chrome like brave work as well)</li>
+                            <li>The Metamask browser extension found <a href="https://metamask.io/" target="_blank"
+                                    class="btn btn-warning">Here</a>
                             </li>
-                        </ul>
-                    </div>
-                    <div class="row pt-3 border-bottom">
-                        <p class="w-100">install parity: <kbd>bash &lt;(curl https://get.parity.io -L) -r
-                                stable</kbd>
+
+
                         </p>
                     </div>
                     <div class="row pt-3 border-bottom">
-                        <p class="w-100">clone the DecentraCorpPoA repo: <kbd>git clone
-                                https://github.com/DecentraCorp/DecentraCorpPoA.git</kbd>
-                        </p>
+                        <p class="w-100">Follow the install and account creation steps for metamask. During this process you will be asked
+                        to copy a mnemonic pass phrase. This string of words can be used to recover your account. The metamask account you create can
+                      be used on other EVM based networks like Ethereum.</p>
                     </div>
                     <div class="row pt-3 border-bottom">
-                        <p class="w-100">move into the DecentraCorp directory: <kbd>cd DecentraCorpPoA</kbd></p>
-                    </div>
-                    <div class="row pt-3 border-bottom">
-                        <p class="w-100">use Nano to setup a new password: <kbd>sudo nano pass.pwd</kbd></p>
-                    </div>
-                    <div class="row pt-3 border-bottom">
-                        <p class="w-100">save your password: <kbd>ctrl + x</kbd> then <kbd>y</kbd> then <kbd>enter</kbd>
-                        </p>
-                    </div>
-                    <div class="row pt-3 border-bottom">
-                        <p class="w-100">run parity with your password to create a new public key hash: <kbd>parity
-                                --config config.toml account new</kbd>
-                            <span class="d-block pt-2 text-warning font-weight-bold">copy this hash for future
-                                use</span>
-                            <span class="d-block pt-2 text-warning">Note: <kbd>ctrl + shift +
-                                    C</kbd> to
-                                copy in
-                                Nano</span>
-                        </p>
-                    </div>
-                    <div class="row pt-3 border-bottom">
-                        <p class="w-100">open up config.toml: <kbd>sudo nano config.toml</kbd></p>
-                    </div>
-                    <div class="row pt-3 border-bottom">
-                        <p class="w-100">remove the <kbd>#</kbd> symbol before the <kbd>#unlock</kbd>(line 32) and
-                            <kbd>#engine_signer</kbd>(line 36) variables
-                        </p>
-                    </div>
-                    <div class="row pt-3 border-bottom">
-                        <p class="w-100">replace the current hash values of <kbd>unlock</kbd>(line 32) and
-                            <kbd>engine_signer</kbd>(line 36)
-                            with your public key hash:
-                            <span class="d-block"><kbd>unlock = ["PasteYourPublicKeyHashHere"]</kbd>
-                                <kbd>engine_signer = "PasteYourPublicKeyHashHere"</kbd>
-                            </span>
-                            <span class="d-block pt-2 text-warning">Note: <kbd>ctrl + shift +
-                                    V</kbd> to
-                                paste in
-                                Nano</span></p>
-                    </div>
-                    <div class="row pt-3 border-bottom">
-                        <p class="w-100">save your updated config.toml file: <kbd>ctrl + x</kbd> then <kbd>y</kbd> then
-                            <kbd>enter</kbd></p>
-                    </div>
-                    <div class="row pt-3 border-bottom">
-                        <p class="w-100">connect to the network: <kbd>parity --config config.toml</kbd>
-                            <span class="d-block pt-2 text-warning">Your node will sync and begin to download the
-                                blockchain</span>
-                            <span class="d-block pt-2 text-warning font-weight-bold">Keep this terminal open
-                                and
-                                running in the background</span>
-                        </p>
-                    </div>
-                    <div class="row pt-3 border-bottom">
-                        <p class="w-100">Start your web browser and open your Metamask extension. Change the Metamask
-                            network to
-                            localhost:8545.</p>
-                    </div>
-                    <div class="row pt-3 border-bottom">
+                      <div class=" col-11 col-sm-10 col-md-6">
+                        <p class="w-100">Open Metamask and locate the Network selection drop down menu. The Metamask icon is often in the top right side of the browser.</p>
+                      </div>
+                        <div class=" col-11 col-sm-10 col-md-6">
+                          <img src="assets/img/Selection_005.png" alt="pi and antenna assembly"
+                           class="img-fluid img-thumbnail">
+                        </div>
+
+                          <div class="row pt-3 border-bottom">
+                            <div class=" col-11 col-sm-10 col-md-6">
+                              <img src="assets/img/Selection_009.png" alt="pi and antenna assembly"
+                                    class="img-fluid img-thumbnail">
+                                </div>
+                                  <div class=" col-11 col-sm-10 col-md-6">
+                                <p class="w-100">Select Custom RPC from the bottom of the drop down</p>
+                                </div>
+                                </div>
+                                <div class="row pt-3 border-bottom">
+                                  <div class=" col-11 col-sm-10 col-md-6">
+                                    <p class="w-100">Enter The Information For the DecentraCorp Proof of Authority Network(DCPoA) as shown here:</p>
+                                  </div>
+                                    <div class=" col-11 col-sm-10 col-md-6">
+                                      <img src="assets/img/Selection_008.png" alt="pi and antenna assembly"
+                                       class="img-fluid img-thumbnail">
+                                    </div>
+                                    </div>
+                    <div >
                         <p class="w-100"> Follow <a href="https://DecentraCorp.now.sh" target="_blank"
                                 class="btn btn-warning">
-                                this link</a> to access DecentraCorps dApp to sign up for a membership</p>
-                        <span class="d-block pt-2 text-warning">current membership terms and benefits are posted on the
-                            dApp site, and are likely to change after we complete our beta testing phase</span>
+                                this link</a> to access DecentraCorps dApp to sign up for a membership.</p>
+                        <span class="d-block pt-2 text-warning">Current membership terms and benefits are posted on the
+                            dApp site, and are likely to change after we complete our beta testing phase.</span>
                     </div>
-                    <div class="row pt-3 border-bottom">
-                        <p class="w-100">to disconnect from the network simply press <kbd>ctrl + C</kbd></p>
-                        <span class="d-block pt-2 text-warning font-weight-bold">close your browser and metamask before
-                            disconnecting from the network</span>
-                    </div>
-                    <div class="row pt-3">
-                        <p class="w-100">to connect in the future:
-                            <span class="d-block text-center"> first, move to the DecentraCorpPoA directiory via
-                                terminal.</span>
-                            <span class="d-block text-center"> second, connect to parity <kbd>parity --config
-                                    config.toml</kbd> </span>
-                            <span class="d-block text-center"> third, open your browser and metamask extension to access
-                                the dApps</span>
-                        </p>
-                    </div>
+
+                    </ul>
+
                 </div>
             </div>
         </div>
@@ -174,9 +127,9 @@
                         </p>
                     </div>
                     <div class="row justify-content-around">
-                        <div class=" col-11 col-sm-10 col-md-6">
-                            <img src="assets/img/pi_antenna00-md.png" alt="pi and antenna assembly"
-                                class="img-fluid img-thumbnail">
+                      <div class=" col-11 col-sm-10 col-md-6">
+                      <img src="assets/img/pi_antenna01-md.png" alt="finished pi antenna"
+                          class="img-fluid img-thumbnail">
                         </div>
                         <div class=" col-11 col-sm-10 col-md-6">
                             <img src="assets/img/pi_antenna01-md.png" alt="finished pi antenna"
@@ -362,9 +315,8 @@
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#tutorialAccordion">
                 <div class="card-body bg--red text-light">
                     <div class="row">
-                        <span class="display-4 font-weight-bold">This tutorial requires you to have an existing node and
-                            membership</span> <span class="d-block text-warning">Please see the DCPoA and Membership
-                            tutorial!</span>
+                        <span class="display-4 font-weight-bold">This tutorial requires you to have a DecentraCorp
+                            membership</span> <span class="d-block text-warning">Please see the DecentraCorp Membership tutorial First!</span>
                     </div>
                     <div class="row pt-3 border-bottom">
                         <ul class="list-unstyled w-100">
@@ -376,13 +328,68 @@
                             <li>The username you entered when you created your Account</li>
                         </ul>
                     </div>
-
-
                     <div class="row pt-3 border-bottom">
-                        <p class="w-100">
-                            This step assumes you have just done the above and picks up with the assumption that your
-                            node is running
+                        <p class="w-100">install parity: <kbd>bash &lt;(curl https://get.parity.io -L) -r
+                                stable</kbd>
                         </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">clone the DecentraCorpPoA repo: <kbd>git clone
+                                https://github.com/DecentraCorp/DecentraCorpPoA.git</kbd>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">move into the DecentraCorp directory: <kbd>cd DecentraCorpPoA</kbd></p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">use Nano to setup a new password: <kbd>sudo nano pass.pwd</kbd></p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">save your password: <kbd>ctrl + x</kbd> then <kbd>y</kbd> then <kbd>enter</kbd>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">run parity with your password to create a new public key hash: <kbd>parity
+                                --config config.toml account new</kbd>
+                            <span class="d-block pt-2 text-warning font-weight-bold">copy this hash for future
+                                use</span>
+                            <span class="d-block pt-2 text-warning">Note: <kbd>ctrl + shift +
+                                    C</kbd> to
+                                copy in
+                                Nano</span>
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">open up config.toml: <kbd>sudo nano config.toml</kbd></p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">remove the <kbd>#</kbd> symbol before the <kbd>#unlock</kbd>(line 32) and
+                            <kbd>#engine_signer</kbd>(line 36) variables
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">replace the current hash values of <kbd>unlock</kbd>(line 32) and
+                            <kbd>engine_signer</kbd>(line 36)
+                            with your public key hash:
+                            <span class="d-block"><kbd>unlock = ["PasteYourPublicKeyHashHere"]</kbd>
+                                <kbd>engine_signer = "PasteYourPublicKeyHashHere"</kbd>
+                            </span>
+                            <span class="d-block pt-2 text-warning">Note: <kbd>ctrl + shift +
+                                    V</kbd> to
+                                paste in
+                                Nano</span></p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">save your updated config.toml file: <kbd>ctrl + x</kbd> then <kbd>y</kbd> then
+                            <kbd>enter</kbd></p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">connect to the network: <kbd>parity --config config.toml</kbd>
+                            <span class="d-block pt-2 text-warning">Your node will sync and begin to download the
+                                blockchain</span>
+                            <span class="d-block pt-2 text-warning font-weight-bold">Keep this terminal open
+                                and
+                                running in the background</span>
                         <p class="w-100">
                             open a new terminal and navigate to your cloned DecentraCorpPoA repo with <kbd>cd
                                 path/to/DecentraCorpPoA</kbd>
@@ -421,6 +428,20 @@
                         <p class="w-100">
                             After this you can safely close both terminals and they will continue running in the
                             background.
+                        </p>
+                    </div>
+                    <div class="row pt-3 border-bottom">
+                        <p class="w-100">to disconnect from the network simply press <kbd>ctrl + C</kbd></p>
+                        <span class="d-block pt-2 text-warning font-weight-bold">close your browser and metamask before
+                            disconnecting from the network</span>
+                    </div>
+                    <div class="row pt-3">
+                        <p class="w-100">to connect in the future:
+                            <span class="d-block text-center"> first, move to the DecentraCorpPoA directiory via
+                                terminal.</span>
+                            <span class="d-block text-center"> second, connect to parity <kbd>parity --config
+                                    config.toml</kbd> </span>
+                            <span class="d-block text-center"> third, open a second terminal in the same directory and run ./EPMS to start mining!</span>
                         </p>
                     </div>
                 </div>
