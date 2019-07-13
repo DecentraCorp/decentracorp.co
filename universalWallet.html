@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/universalWallet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <title>Universal Wallet</title>
+</head>
+
+<body class="bg--orange">
+
+    <nav class="navbar navbar-expand-lg fixed-top bg--brown navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav w-100 justify-content-end text-light">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Features</a>
+                <a class="nav-item nav-link" href="#">FAQ</a>
+                <a class="nav-item nav-link" href="#">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-5 text-center">
+        <section class="container min-vh-100 d-flex justify-content-center align-items-center">
+            <div class="jumbotron-fluid py-5">
+                <div class="row justify-content-center align-items-center">
+                    <img src="./assets/img/uw-logo-sm.JPG" class="col-md-4 img-fluid animated bounceInDown delay-2s">
+                    <div class="d-flex flex-column col-md-8 brown">
+                        <h1 class="display-4 bounceInDown delay-3s">The Universal Wallet</h1>
+                        <p class="lead bounceInDown delay-3s">The Universal Wallet is an EVM(Ethereum Virtual Machine) compatible wallet
+                          built entirly from web3 technologies. Powered by IPFS(the Inter Planetary File System) and DecentraCorps Proof of Authority Network
+                          the Universal Wallet aims to bring the familiarity and convenience of Web2 to
+                          the power of Web3 by securly abstracting away a users public/private key pairs into a email/password like set-up!
+                        </p>
+                        <a class="btn bg--red text-light btn-lg col-md-4 mx-auto animated bounceInUp delay-2s" href="#" role="button">See The
+                            Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container py-5 brown">
+            <div id="featureOne" class="row align-items-center min-vh-75 py-2 bg--darker-orange rounded-lg my-2 animated">
+                <div id="featureOneText" class="col-md-7">
+                    <h2 class="animated font-weight-bold">Account Abstraction <span class="text-light">The Future of dApps</span></h2>
+                    <p class="animated lead">With Account Abstraction, your ethereum account is availible to you in any compatable dApp
+                      on ANY device. Access your Universal Wallet securly from your Desktop, smart-phone and tablet with just your email and password!
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img id="featureOneImg" src="https://images.unsplash.com/photo-1515432085503-cabf2fbcd690?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
+                        alt="" class="img-fluid img-thumbnail animated">
+                </div>
+            </div>
+            <div id="featureTwo" class="row align-items-center py-2 bg--darker-orange rounded-lg my-2">
+                <div class="col-md-5">
+                    <img id="featureTwoImg" src="https://images.unsplash.com/photo-1533709752211-118fcaf03312?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                        alt="" class="img-fluid img-thumbnail animated">
+                </div>
+                <div class="col-md-7">
+                    <h2 class="font-weight-bold">IPFS Integration <span class="text-light">Powered by the Decentralized Web</span></h2>
+                    <p class="lead">Your Universal Wallet Account is encrypted and uploaded to the Inter Planetary File System(IPFS)
+                    ensuring your wallet exists in many places at once. Once Created, Your account can be recalled and decrypted for use on any Device!</p>
+                </div>
+            </div>
+            <div id="featureThree" class="row align-items-center py-2 bg--darker-orange rounded-lg my-2">
+                <div class="col-md-7">
+                    <h2 class="font-weight-bold">Universal Wallet Wrapper <span class="text-light">An Open-Source tool for dApp Devs</span></h2>
+                    <p class="lead">The Universal Wallet Wrapper is an NPM package aimed at making it easy for dApp developers to seamlessly integrate the
+                      Universal Wallet into their dApps, eliminating the need for users to manage which account they use on which device!</p>
+                </div>
+                <div class="col-md-5">
+                    <img id="featureThreeImg" src="https://images.unsplash.com/photo-1515432085503-cabf2fbcd690?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
+                        alt="" class="img-fluid img-thumbnail animated">
+                </div>
+            </div>
+        </section>
+        <section class="container bg--clay py-5 rounded-lg">
+            <h1 class="display-3 text-right text-light pb-5 pr-5">FAQ</h1>
+            <div class="row justify-content-around text-left">
+                <div class="col-md-5 p-2">
+                    <h3>What problem does the Universal Wallet Address?</h3>
+                    <p class="indent">A major hurtle to web3 and dApp adoption is what is known as the "user onboarding problem". The User onboarding problem refers
+                    to the dificulty a user faces when interacting with dApps as opposed to web2 based applications. Every day end users dont want to worry about account
+                  management like private key storage or importing their account accross multiple devices. Users Expect a web2 like experience where their email and
+                password allow them to acces an application from ANY device.</p>
+                </div>
+                <div class="col-md-5 p-2">
+                    <h3>How does the Universal Wallet address this problem?</h3>
+                    <p class="indent">The Universal Wallet Abstracts away a users public/private keypair using web3 and industry standard encryption technologies
+                    so that the end user only needs to keep track of which Email and password they use accross all universal Wallet powered dApps!</p>
+                </div>
+                <div class="col-md-5 p-2">
+                    <h3>How does the Universal Wallet accomplish this?</h3>
+                    <p class="indent">Upon sign-up the Universal wallet uses the web3.js library to create a new public/private key pair. This keyPair is then encrypted into a standard
+                    JSON object using the users credentials. This JSON is then uploaded to IPFS which returns a hash representing the encrypted JSON file. This Hash is then encrypted again
+                  using the same credentials and uploaded to the Account Abstraction Contract on DecentraCorps Proof of Authority Network where it is linked to the users Email. This set-up allows
+                for a heavily encrypted account key file to be called from any device using the users email address where it can then be decrypted and used by the front end of a dApp.</p>
+                </div>
+                <div class="col-md-5 p-2">
+                    <h3>What types of Accounts are supported?</h3>
+                    <p class="indent">At the moment the Universal Wallet only supports EVM compatible accounts. This means that one account can be created with the Universal Wallet
+                    and used accross all EVM based networks like the Ethereum Mainnet, ALL Ethereum testnets, Ethereum Classic's Mainnet, the DecentraCorp Proof of Authority network
+                  and MANY More. In the future we plan to add support for other networks and tokens like Bitcoin, Litecoin and Bitcoin Cash.</p>
+                </div>
+                <div class="col-md-5 p-2">
+                    <h3>Who can use the Universal Wallet?</h3>
+                    <p class="indent">The Universal Wallet is Open-Source and free to implement/use. This means that ANY dApp developer looking to give their users a better user experience
+                    and or implement universal account access accross all devices can freely implement the Universal Wallet into their dApps. We are starting construction
+                  of a React compatible wrapper first, then moving to other popular frameworks like angular and vue. From here we plan to implement a python version followed by a java version
+                so that dApp developers of any language can curate a better UI/UX for their end users!</p>
+                </div>
+            </div>
+        </section>
+        <section class="container py-5 d-flex justify-content-center">
+            <div class="mx-auto py-5">
+                <h2 class="display-2 text-white py-5">Contact</h2>
+                <div class="d-flex justify-content-center align-items-center py-3">
+                <a href="https://www.linkedin.com/in/christopher-dixon-0a4a98174" target="_blank"
+                    class="px-3 text-white "><i class="fab fa-linkedin fa-3x"></i></a>
+                <a href="https://github.com/DecentraCorp" target="_blank" class="text-white px-3"><i
+                        class="fab fa-github-square fa-3x"></i></a>
+                    </div>
+                <h3 class="py-3 text-light border-bottom">decentracorp@pm.me</h3>
+                <h4 class="pt-5 pb-1 red">Proudly brought to you by</h4>
+                <a href="index.html"><img src="./assets/img/dc-name-logo-sm.png" alt="name logo" class="img-fluid w-50"></a>
+                <h4 class="pt-1 pb-3 red">"The original decentralized corporation"</h4>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+     <!-- icons -->
+     <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
+     integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous">
+ </script>
+    <script src="./assets/js/jquery.waypoints.js"></script>
+    <script src="./assets/js/universalWallet.js"></script>
+</body>
+
+</html>
